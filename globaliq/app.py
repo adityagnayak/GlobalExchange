@@ -15,7 +15,8 @@ import yfinance as yf
 
 from ui.styles import inject
 from ui import components as C
-from ui.market_data import WORLD_INDICES, INDICES_FALLBACK
+from ui.market_data import INDICES_FALLBACK
+from engine.constants import WORLD_INDICES
 from ui.pages.market_pages import (
     render_home,
     render_stocks,
