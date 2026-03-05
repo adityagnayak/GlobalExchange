@@ -102,12 +102,14 @@ with st.sidebar:
         'font-weight:500;color:#00d4aa;margin-bottom:1.2rem;">Global<span style="color:#e8edf5">IQ</span></div>',
         unsafe_allow_html=True,
     )
+    default_idx = list(PAGES.keys()).index(st.session_state.get("_nav", "🏠 Overview"))
     selection = st.radio(
         "Navigate",
         list(PAGES.keys()),
         label_visibility="collapsed",
-        index=0,
+        index=default_idx,
     )
+    st.session_state["_nav"] = selection
     current_page = PAGES[selection]
 
 # ─── Indices bar (always visible) ─────────────────────────────────────────────
