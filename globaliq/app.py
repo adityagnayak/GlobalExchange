@@ -9,7 +9,7 @@ Thin orchestration layer.  This file only:
 
 All logic lives in engine/ (math) or ui/ (visuals).
 """
-
+import os
 import streamlit as st
 import yfinance as yf
 
@@ -26,7 +26,7 @@ from ui.pages.market_pages import (
     render_news,
 )
 from ui.pages.analysis import render_page as render_analysis_page
-
+os.environ["ANTHROPIC_API_KEY"] = st.secrets.get("ANTHROPIC_API_KEY", "")
 # ─── Page config ───────────────────────────────────────────────────────────────
 st.set_page_config(
     page_title="GlobalIQ — AI Finance Intelligence",
