@@ -44,6 +44,13 @@ def render_home() -> None:
         ("VaR",    "Risk Modelling"),
         ("Free",   "Always"),
     ]
+    st.markdown("<br>", unsafe_allow_html=True)
+    col1, col2, col3 = st.columns([1,2,1])
+    with col2:
+        if st.button("📊 Analyse a Security", type="primary", use_container_width=True):
+            st.session_state["_nav"] = "📊 Security Analysis"
+            st.rerun()
+  
     for col, (val, label) in zip(cols, stats):
         with col:
             st.markdown(
