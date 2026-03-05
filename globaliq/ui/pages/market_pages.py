@@ -309,7 +309,7 @@ def render_analyst() -> None:
 
         with st.spinner("Analysing global markets…"):
             try:
-                client = anthropic.Anthropic()
+                client = anthropic.Anthropic(api_key=st.secrets["ANTHROPIC_API_KEY"])
                 response = client.messages.create(
                     model="claude-sonnet-4-6",
                     max_tokens=1024,
