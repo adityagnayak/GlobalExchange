@@ -32,7 +32,7 @@ st.set_page_config(
     page_title="GlobalIQ — AI Finance Intelligence",
     page_icon="📊",
     layout="wide",
-    initial_sidebar_state="collapsed",
+    initial_sidebar_state="expanded",
 )
 
 # ─── Theme ─────────────────────────────────────────────────────────────────────
