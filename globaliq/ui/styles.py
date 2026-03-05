@@ -24,7 +24,7 @@ GLOBAL_CSS = """
   }
 
   /* ── Streamlit chrome overrides ── */
-  #MainMenu, footer, .stDeployButton, header { display: none !important; }
+  #MainMenu, footer, .stDeployButton { display: none !important; }
   .block-container { padding-top: 1rem !important; padding-bottom: 5rem !important; max-width: 1280px; }
   [data-testid="stSidebar"] { background: #0d1117 !important; border-right: 1px solid var(--border); }
   [data-testid="stSidebar"] label {
